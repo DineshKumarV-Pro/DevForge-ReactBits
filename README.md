@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# React Bits
 
-## Getting Started
+React Bits is an animated React component collection and visual showcase built with Next.js, React, TypeScript, Tailwind CSS, GSAP, Three.js, and WebGL.
 
-First, run the development server:
+The homepage presents a responsive gallery of 219 components, including backgrounds, text effects, cards, menus, cursors, loaders, galleries, controls, and WebGL experiences.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+
+- 219 reusable React components
+- Lazy-loaded component previews
+- Responsive component gallery
+- Animated backgrounds and interfaces
+- GSAP, Motion, Three.js, React Three Fiber, and OGL integrations
+- Next.js App Router and TypeScript
+- Tailwind CSS styling
+
+## Prerequisites
+
+- Node.js 20 or later
+- npm
+
+## Installation
+
+Install the dependencies:
+
+```powershell
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Start the development server:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```powershell
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000).
 
-## Learn More
+For complete setup details, see [INSTALLATION.md](./INSTALLATION.md).
 
-To learn more about Next.js, take a look at the following resources:
+## Available scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm run build` | Create an optimized production build |
+| `npm run start` | Start the production server |
+| `npm run lint` | Run ESLint |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project structure
 
-## Deploy on Vercel
+```text
+src/
+├── app/
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── globals.css
+├── components/
+│   ├── ComponentGallery.tsx
+│   └── 219 visual component files
+└── lib/
+    └── utils.ts
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Component usage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Components are stored in `src/components`. Import a component by its default export:
+
+```tsx
+import Aurora from "@/components/Aurora";
+
+export default function Example() {
+  return (
+    <Aurora
+      colorStops={["#5227FF", "#7cff67", "#5227FF"]}
+      amplitude={1}
+      blend={0.5}
+    />
+  );
+}
+```
+
+Individual components expose their own props and may require additional configuration or external assets. Check the component source and its exported interfaces for the supported options.
+
+## Production build
+
+```powershell
+npm run build
+npm run start
+```
